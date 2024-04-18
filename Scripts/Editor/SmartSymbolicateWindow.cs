@@ -269,7 +269,7 @@ namespace BrunoMikoski.SmartSymbolicate
                 string targetLib = string.Empty;
                 if (symbolsType == SymbolsType.Auto)
                 {
-                    Match libMatch = Regex.Match(line, @"(?<=at )(.*)(?=\.)");
+                    Match libMatch = Regex.Match(line, @"(\w+)\.so");
                     if (!libMatch.Success)
                         continue;
                     
